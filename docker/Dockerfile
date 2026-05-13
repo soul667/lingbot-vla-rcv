@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir vllm==0.7.3 torch==2.5.1 torchvision==0.20.1 torc
     pytest yapf py-spy pyext pre-commit ruff packaging
 
 # Install flux
-RUN pip install --no-cache-dir byte-flux
+RUN pip install --no-cache-dir --no-build-isolation byte-flux
 
 # Install flash-attn and triton
 RUN pip install --no-cache-dir flash-attn triton>=3.1.0
