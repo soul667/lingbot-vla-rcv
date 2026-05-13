@@ -59,6 +59,23 @@ bash install.sh
 
 ---
 
+## 🐳 Build Docker Image with GitHub Actions
+
+This repository includes a workflow at `.github/workflows/docker-image.yml`.
+
+- **pull_request / workflow_dispatch**: build image only (no push).
+- **push to `main` or tag `v*`**: build and push image to **GHCR**.
+
+Image name:
+
+```text
+ghcr.io/soul667/lingbot-vla-rcv
+```
+
+You can manually trigger it from **GitHub → Actions → Build Docker Image → Run workflow**.
+
+---
+
 ## 📦 Model Download
 We release LingBot-VLA pre-trained weights in two configurations: depth-free version and a depth-distilled version.
 #### Pretrained Checkpoints for Post-Training with and without depth
